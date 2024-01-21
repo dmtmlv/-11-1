@@ -1,0 +1,14 @@
+C:\Users\1\source\repos\С#.LAB1.Fractions\С#.LAB1.Fractions\bin\Debug\net8.0\С#.LAB1.Fractions.exe
+C:\Users\1\source\repos\С#.LAB1.Fractions\С#.LAB1.Fractions\bin\Debug\net8.0\С#.LAB1.Fractions.deps.json
+C:\Users\1\source\repos\С#.LAB1.Fractions\С#.LAB1.Fractions\bin\Debug\net8.0\С#.LAB1.Fractions.runtimeconfig.json
+C:\Users\1\source\repos\С#.LAB1.Fractions\С#.LAB1.Fractions\bin\Debug\net8.0\С#.LAB1.Fractions.dll
+C:\Users\1\source\repos\С#.LAB1.Fractions\С#.LAB1.Fractions\bin\Debug\net8.0\С#.LAB1.Fractions.pdb
+C:\Users\1\source\repos\С#.LAB1.Fractions\С#.LAB1.Fractions\obj\Debug\net8.0\С#.LAB1.Fractions.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\1\source\repos\С#.LAB1.Fractions\С#.LAB1.Fractions\obj\Debug\net8.0\С#.LAB1.Fractions.AssemblyInfoInputs.cache
+C:\Users\1\source\repos\С#.LAB1.Fractions\С#.LAB1.Fractions\obj\Debug\net8.0\С#.LAB1.Fractions.AssemblyInfo.cs
+C:\Users\1\source\repos\С#.LAB1.Fractions\С#.LAB1.Fractions\obj\Debug\net8.0\С#.LAB1.Fractions.csproj.CoreCompileInputs.cache
+C:\Users\1\source\repos\С#.LAB1.Fractions\С#.LAB1.Fractions\obj\Debug\net8.0\С#.LAB1.Fractions.dll
+C:\Users\1\source\repos\С#.LAB1.Fractions\С#.LAB1.Fractions\obj\Debug\net8.0\refint\С#.LAB1.Fractions.dll
+C:\Users\1\source\repos\С#.LAB1.Fractions\С#.LAB1.Fractions\obj\Debug\net8.0\С#.LAB1.Fractions.pdb
+C:\Users\1\source\repos\С#.LAB1.Fractions\С#.LAB1.Fractions\obj\Debug\net8.0\С#.LAB1.Fractions.genruntimeconfig.cache
+C:\Users\1\source\repos\С#.LAB1.Fractions\С#.LAB1.Fractions\obj\Debug\net8.0\ref\С#.LAB1.Fractions.dll
