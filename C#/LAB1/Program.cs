@@ -1,17 +1,17 @@
-﻿using System;
+using System;
 
 class Fraction
 {
-    private int numerator;
-    private int denominator;
+    private int numerator; // числитель дроби
+    private int denominator; // знаменатель дроби
 
-    public int Numerator
+    public int Numerator // доступ к числителю
     {
         get { return numerator; }
         set { numerator = value; Simplify(); }
     }
 
-    public int Denominator
+    public int Denominator // доступ к знаменателю
     {
         get { return denominator; }
         set
@@ -23,25 +23,18 @@ class Fraction
         }
     }
 
-    public double DecimalValue
+    public double DecimalValue // возвращает десятичное представление дроби только для чтения
     {
         get { return (double)numerator / denominator; }
     }
 
-    public Fraction(int numerator, int denominator)
+    public Fraction(int numerator, int denominator) // принимает числитель и знаменатель дроби
     {
         this.numerator = numerator;
         this.Denominator = denominator;
     }
 
-    public void Simplify()
-    {
-        int gcd = GCD(Math.Abs(numerator), denominator);
-        numerator /= gcd;
-        denominator /= gcd;
-    }
-
-    public static int GCD(int a, int b)
+    public static int GCD(int a, int b) // находит наибольший общий делитель двух чисел
     {
         while (b != 0)
         {
@@ -50,6 +43,13 @@ class Fraction
             a = temp;
         }
         return a;
+    }
+
+    public void Simplify() // упрощает дробь, используя наибольший общий делитель
+    {
+        int gcd = GCD(Math.Abs(numerator), denominator);
+        numerator /= gcd;
+        denominator /= gcd;
     }
 
     public static Fraction operator +(Fraction a, Fraction b)
