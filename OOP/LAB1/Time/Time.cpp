@@ -1,9 +1,9 @@
 #include "Time.hpp"
 
-// Конструктор с параметрами
+// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
 Time::Time(int h, int m, int s) : hours(h), minutes(m), seconds(s) {}
 
-// Геттеры и сеттеры
+// Р“РµС‚С‚РµСЂС‹ Рё СЃРµС‚С‚РµСЂС‹
 int Time::getHours() const { return hours; }
 int Time::getMinutes() const { return minutes; }
 int Time::getSeconds() const { return seconds; }
@@ -11,7 +11,7 @@ void Time::setHours(int h) { hours = h; }
 void Time::setMinutes(int m) { minutes = m; }
 void Time::setSeconds(int s) { seconds = s; }
 
-// Сложение времени
+// РЎР»РѕР¶РµРЅРёРµ РІСЂРµРјРµРЅРё
 Time Time::operator+(const Time& t) const {
     int s = seconds + t.seconds;
     int m = minutes + t.minutes + s / 60;
@@ -21,7 +21,7 @@ Time Time::operator+(const Time& t) const {
     return Time(h, m, s);
 }
 
-// Вычитание времени
+// Р’С‹С‡РёС‚Р°РЅРёРµ РІСЂРµРјРµРЅРё
 Time Time::operator-(const Time& t) const {
     int s = seconds - t.seconds;
     int m = minutes - t.minutes;
@@ -37,19 +37,19 @@ Time Time::operator-(const Time& t) const {
     return Time(h, m, s);
 }
 
-// Добавление времени в минутах
+// Р”РѕР±Р°РІР»РµРЅРёРµ РІСЂРµРјРµРЅРё РІ РјРёРЅСѓС‚Р°С…
 void Time::addMinutes(int m) {
     minutes += m;
     hours += minutes / 60;
     minutes %= 60;
 }
 
-// Перевод времени в секунды
+// РџРµСЂРµРІРѕРґ РІСЂРµРјРµРЅРё РІ СЃРµРєСѓРЅРґС‹
 int Time::toSeconds() const {
     return hours * 3600 + minutes * 60 + seconds;
 }
 
-// Преобразование в строку (в формате Часы:Минуты:Секунды)
+// РџСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ РІ СЃС‚СЂРѕРєСѓ (РІ С„РѕСЂРјР°С‚Рµ Р§Р°СЃС‹:РњРёРЅСѓС‚С‹:РЎРµРєСѓРЅРґС‹)
 std::string Time::toString() const {
     std::stringstream ss;
     ss << std::setfill('0') << std::setw(2) << hours << ":"
