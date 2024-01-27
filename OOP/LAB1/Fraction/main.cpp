@@ -3,28 +3,28 @@
 
 int main() {
     setlocale(LC_ALL, "ru");
-    // Создание дроби с конструктором с параметрами
+    // РЎРѕР·РґР°РЅРёРµ РґСЂРѕР±Рё
     Fraction fraction(3, 4);
 
-    // Использование геттеров
+    // РСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ РіРµС‚С‚РµСЂРѕРІ
     std::cout << "Numerator: " << fraction.getNumerator() << std::endl;
     std::cout << "Denominator: " << fraction.getDenominator() << std::endl;
 
-    // Использование сеттеров
+    // РСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ СЃРµС‚С‚РµСЂРѕРІ
     fraction.setNumerator(36);
     fraction.setDenominator(6);
 
-    // Использование методов
+    // РСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ РјРµС‚РѕРґРѕРІ
     Fraction other(1, 1);
     Fraction sum = fraction.add(other);
-    std::cout << "Сумма: " << sum.getNumerator() << "/" << sum.getDenominator() << std::endl;
+    std::cout << "РЎСѓРјРјР°: " << sum.getNumerator() << "/" << sum.getDenominator() << std::endl;
 
     Fraction sub = fraction.subtract(other);
-    std::cout << "Разница: " << sub.getNumerator() << "/" << sub.getDenominator() << std::endl;
+    std::cout << "Р Р°Р·РЅРёС†Р°: " << sub.getNumerator() << "/" << sub.getDenominator() << std::endl;
 
     Fraction mul = fraction.multiply(other);
-    std::cout << "Произведение: " << mul.getNumerator() << "/" << mul.getDenominator() << std::endl;
+    std::cout << "РџСЂРѕРёР·РІРµРґРµРЅРёРµ: " << mul.getNumerator() << "/" << mul.getDenominator() << std::endl;
 
     Fraction div = fraction.divide(other);
-    std::cout << "Частное: " << div.getNumerator() << "/" << div.getDenominator() << std::endl;
+    std::cout << "Р§Р°СЃС‚РЅРѕРµ: " << div.getNumerator() << "/" << div.getDenominator() << std::endl;
 }
