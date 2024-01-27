@@ -7,7 +7,7 @@ GeometricFigure::GeometricFigure() {
 	int sides;
 	float x, y;
 }
-// конструктор с параметрами
+// РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
 GeometricFigure::GeometricFigure(int s, float xx, float yy){ 
 	sides = s;
 	x = xx;
@@ -15,17 +15,17 @@ GeometricFigure::GeometricFigure(int s, float xx, float yy){
 }
 
 
-// геттеры
+// РіРµС‚С‚РµСЂС‹
 int GeometricFigure::getSides() const { return sides; }
 float GeometricFigure::getX() const { return x; }
 float GeometricFigure::getY() const { return y; }
 
-// сеттеры
+// СЃРµС‚С‚РµСЂС‹
 void GeometricFigure::setSides(int s) { sides = s; }
 void GeometricFigure::setX(float xx) { x = xx; }
 void GeometricFigure::setY(float yy) { y = yy; }
 
-// методы для расчета площади и периметра
+// РјРµС‚РѕРґС‹ РґР»СЏ СЂР°СЃС‡РµС‚Р° РїР»РѕС‰Р°РґРё Рё РїРµСЂРёРјРµС‚СЂР°
 float GeometricFigure::calculateArea() const {
 	return x * y;
 }
@@ -34,17 +34,17 @@ float GeometricFigure::calculatePerimeter() const {
 	return 2 * (x+y);
 }
 
-// операторы
+// РѕРїРµСЂР°С‚РѕСЂС‹
 bool GeometricFigure::operator==(const GeometricFigure& other) const {
 	return (this->sides == other.sides && this->x == other.x && this->y == other.y);
 }
 
-// метод для записи в файл
+// РјРµС‚РѕРґ РґР»СЏ Р·Р°РїРёСЃРё РІ С„Р°Р№Р»
 void GeometricFigure::writeToFile(std::ofstream& file) const {
 	file << sides << " " << x << " " << y << std::endl;
 }
 
-// метод для чтения из файла
+// РјРµС‚РѕРґ РґР»СЏ С‡С‚РµРЅРёСЏ РёР· С„Р°Р№Р»Р°
 void GeometricFigure::readFromFile(std::ifstream& file) {
 	file >> sides >> x >> y;
 }
