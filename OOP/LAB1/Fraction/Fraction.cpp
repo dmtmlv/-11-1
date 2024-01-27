@@ -5,13 +5,13 @@ Fraction::Fraction() {
     denominator = 0;
 }
 
-    // Конструктор с параметрами
+    // РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
 Fraction::Fraction(int num, int denom) {
         numerator = num;
         denominator = denom;
     }
 
-    // Геттеры и сеттеры
+    // Р“РµС‚С‚РµСЂС‹ Рё СЃРµС‚С‚РµСЂС‹
     int Fraction::getNumerator() {
         return numerator;
     }
@@ -25,21 +25,21 @@ Fraction::Fraction(int num, int denom) {
     }
 
     void Fraction::setDenominator(int denom) {
-        // Проверка делителя на ноль
+        // РџСЂРѕРІРµСЂРєР° РґРµР»РёС‚РµР»СЏ РЅР° РЅРѕР»СЊ
         if (denom == 0) {
-            throw std::runtime_error("Знаменатель не может быть равен нулю");
+            throw std::runtime_error("Р—РЅР°РјРµРЅР°С‚РµР»СЊ РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ СЂР°РІРµРЅ РЅСѓР»СЋ");
         }
         denominator = denom;
     }
 
-    // Метод для сокращения дроби
+    // РњРµС‚РѕРґ РґР»СЏ СЃРѕРєСЂР°С‰РµРЅРёСЏ РґСЂРѕР±Рё
     void Fraction::simplify() {
         int divisor = gcd(numerator, denominator);
         numerator /= divisor;
         denominator /= divisor;
     }
 
-    // Метод для сложения дробей
+    // РњРµС‚РѕРґ РґР»СЏ СЃР»РѕР¶РµРЅРёСЏ РґСЂРѕР±РµР№
     Fraction Fraction::add(Fraction other) {
         int num = numerator * other.getDenominator() + other.getNumerator() * denominator;
         int denom = denominator * other.getDenominator();
@@ -48,7 +48,7 @@ Fraction::Fraction(int num, int denom) {
         return result;
     }
 
-    // Метод для вычитания дробей
+    // РњРµС‚РѕРґ РґР»СЏ РІС‹С‡РёС‚Р°РЅРёСЏ РґСЂРѕР±РµР№
     Fraction Fraction::subtract(Fraction other) {
         int num = numerator * other.getDenominator() - other.getNumerator() * denominator;
         int denom = denominator * other.getDenominator();
@@ -57,7 +57,7 @@ Fraction::Fraction(int num, int denom) {
         return result;
     }
 
-    // Метод для умножения дробей
+    // РњРµС‚РѕРґ РґР»СЏ СѓРјРЅРѕР¶РµРЅРёСЏ РґСЂРѕР±РµР№
     Fraction Fraction::multiply(Fraction other) {
         int num = numerator * other.getNumerator();
         int denom = denominator * other.getDenominator();
@@ -66,7 +66,7 @@ Fraction::Fraction(int num, int denom) {
         return result;
     }
 
-    // Метод для деления дробей
+    // РњРµС‚РѕРґ РґР»СЏ РґРµР»РµРЅРёСЏ РґСЂРѕР±РµР№
     Fraction Fraction::divide(Fraction other) {
         int num = numerator * other.getDenominator();
         int denom = denominator * other.getNumerator();
@@ -75,14 +75,14 @@ Fraction::Fraction(int num, int denom) {
         return result;
     }
 
-    // Метод для сравнения дробей
+    // РњРµС‚РѕРґ РґР»СЏ СЃСЂР°РІРЅРµРЅРёСЏ РґСЂРѕР±РµР№
     bool Fraction::equals(Fraction other) {
         simplify();
         other.simplify();
         return (numerator == other.getNumerator()) && (denominator == other.getDenominator());
     }
 
-    // Метод для вычисления наибольшего общего делителя
+    // РњРµС‚РѕРґ РґР»СЏ РІС‹С‡РёСЃР»РµРЅРёСЏ РЅР°РёР±РѕР»СЊС€РµРіРѕ РѕР±С‰РµРіРѕ РґРµР»РёС‚РµР»СЏ
     int Fraction::gcd(int a, int b) {
         if (b == 0) {
             return a;
@@ -92,37 +92,37 @@ Fraction::Fraction(int num, int denom) {
         }
     }
 
-    // Перегрузка оператора сложения
+    // РџРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° СЃР»РѕР¶РµРЅРёСЏ
     Fraction Fraction::operator+(Fraction other) {
         return add(other);
     }
 
-    // Перегрузка оператора вычитания
+    // РџРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° РІС‹С‡РёС‚Р°РЅРёСЏ
     Fraction Fraction::operator-(Fraction other) {
         return Fraction::subtract(other);
     }
 
-    // Перегрузка оператора умножения
+    // РџРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° СѓРјРЅРѕР¶РµРЅРёСЏ
     Fraction Fraction::operator*(Fraction other) {
         return multiply(other);
     }
 
-    // Перегрузка оператора деления
+    // РџРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° РґРµР»РµРЅРёСЏ
     Fraction Fraction::operator/(Fraction other) {
         return divide(other);
     }
 
-    // Перегрузка оператора сравнения на равенство
+    // РџРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° СЃСЂР°РІРЅРµРЅРёСЏ РЅР° СЂР°РІРµРЅСЃС‚РІРѕ
     bool Fraction::operator==(Fraction other) {
         return equals(other);
     }
 
-    // Запись состояния объекта в файл
+    // Р—Р°РїРёСЃСЊ СЃРѕСЃС‚РѕСЏРЅРёСЏ РѕР±СЉРµРєС‚Р° РІ С„Р°Р№Р»
     void Fraction::writeToFile(std::ofstream& file) {
         file << numerator << "/" << denominator << std::endl;
     }
 
-    // Чтение состояния объекта из файла
+    // Г—Р§С‚РµРЅРёРµ СЃРѕСЃС‚РѕСЏРЅРёСЏ РѕР±СЉРµРєС‚Р° РёР· С„Р°Р№Р»Р°
     void Fraction::readFromFile(std::ifstream& file) {
         char slash;
         file >> numerator >> slash >> denominator;
