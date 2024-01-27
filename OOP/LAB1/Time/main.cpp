@@ -5,8 +5,8 @@ int main() {
     setlocale(LC_ALL, "ru");
     // Создание объекта времени
 
-    Time t1(10, 30, 45);
-    Time t2(2, 15, 20);
+    Time t1(13, 20, 59);
+    Time t2(4, 15, 10);
 
     std::cout << "Начальное время t1: " << t1.getString() << std::endl;
     std::cout << "Добавочное время t2: " << t2.getString() << std::endl;
@@ -16,8 +16,8 @@ int main() {
     std::cout << "Сумма времени t1+t2: " << sum.getString() << std::endl;
 
     // Добавление времени в минутах
-    t1.addMinutes(25);
-    std::cout << "Время после добавления 25 минут: " << t1.getString() << std::endl;
+    t1.addMinutes(30);
+    std::cout << "Время после добавления 30 минут: " << t1.getString() << std::endl;
 
     // Перевод времени в секунды
     std::cout << "Перевод времени в секундах: " << t1.convertToSeconds() << std::endl;
