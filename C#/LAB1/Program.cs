@@ -34,16 +34,26 @@ class Fraction
         this.Denominator = denominator;
     }
 
-    public static int GCD(int a, int b) // находит наибольший общий делитель двух чисел
-    {
-        while (b != 0)
-        {
-            int temp = b;
-            b = a % b;
-            a = temp;
-        }
-        return a;
-    }
+   public static int GCD(int a, int b){ //находит наибольший общий делитель
+       if (a == 0)
+       {
+           return b;
+       }
+       else{
+           while (b != 0)
+           {
+               if (a > b)
+               {
+                   a = a - b;
+               }
+               else
+               {
+                   b = b -  a;
+               }
+           }
+           return a;
+       }
+   }
 
     public void Simplify() // упрощает дробь, используя наибольший общий делитель
     {
