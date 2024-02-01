@@ -31,7 +31,7 @@ class Fraction
     public Fraction(int numerator, int denominator) // принимает числитель и знаменатель дроби
     {
         this.numerator = numerator;
-        this.Denominator = denominator;
+        this.denominator = denominator;
     }
 
    public static int GCD(int a, int b){ //находит наибольший общий делитель
