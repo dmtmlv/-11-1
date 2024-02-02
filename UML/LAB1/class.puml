@@ -1,1 +1,27 @@
+@startuml
+class DiskWriter  {
+  +writeData(data: byte[]): bool
+  +finalizeWrite(): bool
+  +verifyData(): bool
+}
 
+class Disk{
+  +size(): double
+  +damage(): double
+}
+
+class FilesWriting {
+  - diskWriter: DiskWriter
+  - disk: Disk
+
+  + startWriting(data: byte[]): void
+  + handleInsufficientSpace(): void
+  + handleDiskDamage(): void
+  + handleVerificationError(): void
+}
+
+DiskWriter --> Disk
+FilesWriting --> DiskWriter 
+FilesWriting --> Disk
+
+@enduml
