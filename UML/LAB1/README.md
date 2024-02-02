@@ -3,9 +3,11 @@
 ![class](https://github.com/dmtmlv/-11-1/blob/main/UML/screen/UML.LAB1.1.png)
 
 
+
 - диаграмма прецедентов (use case):
   
 ![use_case](https://github.com/dmtmlv/-11-1/blob/main/UML/screen/UML.LAB1.2.png)
+
 
 
 - диаграммы последовательностей (sequence) для процесса
