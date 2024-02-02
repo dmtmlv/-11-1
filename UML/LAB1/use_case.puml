@@ -1,0 +1,14 @@
+@startuml
+left to right direction
+actor "Пользователь" as fc
+rectangle Диск {
+usecase "Запись" as UC1
+usecase "Чтение" as UC2
+usecase "Проверка" as UC3
+usecase "Очистка" as UC4
+}
+fc --> UC1
+fc --> UC2
+fc --> UC3
+fc --> UC4
+@enduml
