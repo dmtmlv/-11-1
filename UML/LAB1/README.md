@@ -4,15 +4,16 @@
 
 
 - диаграмма прецедентов (use case):
-- 
+  
 ![use_case](https://github.com/dmtmlv/-11-1/blob/main/UML/screen/UML.LAB1.2.png)
+
 
 - диаграммы последовательностей (sequence) для процесса
 записи информации на DVD-диск(Различные случаи):
 
-1. Запись на диск и верификация завершены успешно
+
    
-![1](https://github.com/dmtmlv/-11-1/blob/main/UML/screen/UML.LAB1.3.1.png)
+![1](https://github.com/dmtmlv/-11-1/blob/main/UML/screen/UML.LAB1.3.1.png)   1. Запись на диск и верификация завершены успешно
 
 3. Запись на диск не выполнена по причине недостаточного
 свободного места на диске
