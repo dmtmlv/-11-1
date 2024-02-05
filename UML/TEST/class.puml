@@ -3,21 +3,21 @@
 @startuml
 
 class Warehouse {
-  +items: List;
+  +goods: List;
   +auditors: List;
-  +addItem(item: Item): void;
-  +removeItem(item: Item): void;
+  +addGoods(goods: Goods): void;
+  +removeGoods(goods: Goods): void;
   +auditItems(): void;
   }
 
-class Item {
+class Goods {
   +id: int;
   +name: string;
   +quantity: int;
 
-  +getId(): int;
-  +getName(): string;
-  +getQuantity(): int;
+  +getId();
+  +getName();
+  +getQuantity();
   }
 
 class Staff {
@@ -25,20 +25,20 @@ class Staff {
   +id: int;
   +name: string;
 
-  +getId(): int;
-  +getName(): string ;
+  +getId();
+  +getName();
   }
 
 class Store {
 
-  +items: List;
+  +goods: List;
   +placement: List;
   +auditors: List;
 
-  +addItem(item: Item): void;
-  +removeItem(item: Item): void;
-  +placeItem(item: Item, placement: Placement): void;
-  +auditItems(): void ;
+  +addGoods(goods: Goods): void;
+  +removeGoods(goods: Goods): void;
+  +placeGoods(goods: Goods, placement: Placement): void;
+  +auditGoods();
   }
 
 class Placement {
@@ -46,20 +46,21 @@ class Placement {
   +id: int;
   +location: string;
 
-  +getId(): int;
-  +getLocation(): string ;
+  +getId();
+  +getLocation();
   }
 
 class CashRegister {
 
   +processPayment(amount: double): void; 
-  +Print checks();
-  +AccountingforSoldgoods();
+  
+  +print checks();
+  +accountingForSoldGoods();
   }
 
-Item --> Warehouse
+Goods --> Warehouse
 Warehouse --> Staff
-Item --> Store 
+Goods --> Store
 Store --> Placement
 Placement --> Staff
 
