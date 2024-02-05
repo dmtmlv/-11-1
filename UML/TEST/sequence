@@ -1,0 +1,26 @@
+# Модель системы учета товаров супермаркета
+
+@startuml
+
+participant Warehouse
+participant Store
+participant Staff
+participant Item
+participant Placement
+participant CashRegister
+
+Warehouse ->> Item: Добавить товар
+Warehouse ->> Item: Убрать товар
+Warehouse ->> Staff: Назначить аудитора
+Warehouse ->> Warehouse: Произвести аудит товаров
+
+
+Store ->> Item: Добавить товар
+Store ->> Item: Убрать товар
+Store ->> Placement: Разместить товар
+Store ->> Store: Произвести аудит товаров
+
+CashRegister -> CashRegister: Обработать платеж
+CashRegister -> CashRegister: Напечатать чек
+CashRegister -> CashRegister: Произвести учет проданных товаров
+@enduml
