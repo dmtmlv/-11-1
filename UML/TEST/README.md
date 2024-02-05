@@ -1,6 +1,6 @@
 - Диаграмма классов:
   
-![class]([https://github.com/dmtmlv/-11-1/blob/main/UML/screen/test_class.png](https://github.com/dmtmlv/-11-1/blob/main/UML/screen/class.png))
+![class](https://github.com/dmtmlv/-11-1/blob/main/UML/screen/class.png)
 
 
 - Диаграмма использования(на примере кассира и покупателя):
