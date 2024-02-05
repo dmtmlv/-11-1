@@ -7,7 +7,7 @@ class Warehouse {
   +auditors: List;
   +addGoods(goods: Goods): void;
   +removeGoods(goods: Goods): void;
-  +auditItems(): void;
+  +auditGoods(): void;
   }
 
 class Goods {
