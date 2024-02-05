@@ -57,10 +57,10 @@ class CashRegister {
   +AccountingforSoldgoods();
   }
 
-Item --> Warehouse : "stored in"
-Warehouse --> Staff : "audited by"
-Item --> Store : "available in"
-Store --> Placement : "placed on"
-Placement --> Staff : "audited by"
+Item --> Warehouse
+Warehouse --> Staff
+Item --> Store 
+Store --> Placement
+Placement --> Staff
 
 @enduml
