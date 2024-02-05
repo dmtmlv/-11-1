@@ -1,1 +1,66 @@
+# Модель системы учета товаров супермаркета
 
+@startuml
+
+class Warehouse {
+  +items: List;
+  +auditors: List;
+  +addItem(item: Item): void;
+  +removeItem(item: Item): void;
+  +auditItems(): void;
+  }
+
+class Item {
+  +id: int;
+  +name: string;
+  +quantity: int;
+
+  +getId(): int;
+  +getName(): string;
+  +getQuantity(): int;
+  }
+
+class Staff {
+
+  +id: int;
+  +name: string;
+
+  +getId(): int;
+  +getName(): string ;
+  }
+
+class Store {
+
+  +items: List;
+  +placement: List;
+  +auditors: List;
+
+  +addItem(item: Item): void;
+  +removeItem(item: Item): void;
+  +placeItem(item: Item, placement: Placement): void;
+  +auditItems(): void ;
+  }
+
+class Placement {
+
+  +id: int;
+  +location: string;
+
+  +getId(): int;
+  +getLocation(): string ;
+  }
+
+class CashRegister {
+
+  +processPayment(amount: double): void; 
+  +Print checks();
+  +AccountingforSoldgoods();
+  }
+
+Item --> Warehouse : "stored in"
+Warehouse --> Staff : "audited by"
+Item --> Store : "available in"
+Store --> Placement : "placed on"
+Placement --> Staff : "audited by"
+
+@enduml
