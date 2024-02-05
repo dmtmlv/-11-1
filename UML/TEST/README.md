@@ -1,10 +1,13 @@
 - Диаграмма классов:
+  
 ![class](https://github.com/dmtmlv/-11-1/blob/main/UML/screen/test_class.png)
 
 
-- Диаграмма использования: 
+- Диаграмма использования:
+  
 ![use_case](https://github.com/dmtmlv/-11-1/blob/main/UML/screen/test_use_case.png)
 
 
--Диаграмма последовательности:
+- Диаграмма последовательности:
+  
 ![sequence](https://github.com/dmtmlv/-11-1/blob/main/UML/screen/sequence.png)
