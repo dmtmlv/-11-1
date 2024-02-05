@@ -11,3 +11,8 @@
 - Диаграмма последовательности:
   
 ![sequence](https://github.com/dmtmlv/-11-1/blob/main/UML/screen/sequence.png)
+
+
+-Диаграмма деятельности:
+
+![activity](https://github.com/dmtmlv/-11-1/blob/main/UML/screen/activity.png)
