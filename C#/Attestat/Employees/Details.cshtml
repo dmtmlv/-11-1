@@ -1,0 +1,9 @@
+﻿@model MyCompany.Controllers.Employee
+
+<h1>Employee Details</h1>
+
+<p>ФИО: @Model.FullName</p>
+<p>Возраст: @Model.Age</p>
+<p>Дата Рождения: @Model.BirthDate.ToShortDateString()</p>
+
+<a asp-controller="Employees" asp-action="Index">Вернуться назад</a>

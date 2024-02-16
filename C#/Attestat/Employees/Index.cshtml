@@ -1,0 +1,12 @@
+﻿@model List<MyCompany.Controllers.Employee>
+
+<h1>Employees List</h1>
+
+<ul>
+    @foreach (var employee in Model)
+    {
+            <li>
+                                <a asp-controller="Employees" asp-action="Details" asp-route-fullName="@employee.FullName">@employee.FullName - @employee.Age лет</a>
+            </li>
+    }
+</ul>
