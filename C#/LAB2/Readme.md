@@ -1,6 +1,6 @@
 
 
-- Структура предприятия - ![1](https://github.com/dmtmlv/-11-1/blob/main/C%23/LAB2/Company.cs)
+- Структура предприятия - [Company.cs](https://github.com/dmtmlv/-11-1/blob/main/C%23/LAB2/Company.cs)
 
 - Структура банка
 
