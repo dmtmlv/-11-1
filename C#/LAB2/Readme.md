@@ -8,13 +8,14 @@
 
 
 ### Структура банка - [Bank.cs](https://github.com/dmtmlv/-11-1/blob/main/C%23/LAB2/Bank.cs)
-![bank](https://github.com/dmtmlv/-11-1/blob/main/C%23/Attestat/screens/bank.jpg)
+<img src="https://github.com/dmtmlv/-11-1/blob/main/C%23/Attestat/screens/bank.jpg" width=50% height=50%>
 
 - исключение: KolichestvoException для отрицательного значения параметра "Количество месяцев"
 - исключение: VkladException для отрицательной суммы вклада
 
+
 ### Структура автоматизированного банкомата - [automated_ATM.cs](https://github.com/dmtmlv/-11-1/blob/main/C%23/LAB2/automated_ATM.cs)
-![atm](https://github.com/dmtmlv/-11-1/blob/main/C%23/Attestat/screens/atm.jpg)
+<img src="https://github.com/dmtmlv/-11-1/blob/main/C%23/Attestat/screens/atm.jpg" width=50% height=50%>
 
 - исключение: OstatokNaSchetException возникает при попытке создать счет с некорректным значением остатка на счете
 - исключение: SnyatSoSchetaException возникает при попытке снять средства со счета, если сумма отрицательная или больше баланса счета
