@@ -9,8 +9,10 @@ public class PremiyaException : Exception
 
 public class OkladException : Exception
 {
+    public int OkladError {get; set;}
     public OkladException(double oklad) : base($"Невозможно добавить сотрудника – указан отрицательный оклад: {oklad}")
     {
+        OkladError = oklad;
     }
 }
 
@@ -64,7 +66,7 @@ public class Sotrudnik
         }
         catch (OkladException ex)
         {
-            Console.WriteLine(ex.Message);
+            Console.WriteLine(ex.Message + $". Некорректная сумма оклада {ex.OkladError}");
         }
 
         return Oklad;
