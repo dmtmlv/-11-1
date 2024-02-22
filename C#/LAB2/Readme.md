@@ -1,7 +1,7 @@
 
 
 ### Структура предприятия - [Company.cs](https://github.com/dmtmlv/-11-1/blob/main/C%23/LAB2/Company.cs)
-![company](https://github.com/dmtmlv/-11-1/blob/main/C%23/Attestat/screens/company.jpg)
+<img src="https://github.com/dmtmlv/-11-1/blob/main/C%23/Attestat/screens/company.jpg" width=50% height=50%>
 
 - исключение: PremiyaException  для отрицательного значения параметра 'Премия'
 - исключене: OkladException возникает при попытке добавить сотрудника с отрицательным окладом
