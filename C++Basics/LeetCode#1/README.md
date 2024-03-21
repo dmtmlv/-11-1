@@ -42,3 +42,46 @@ int main() {
 
     return 0;
 }
+```
+
+
+
+****Дан массив целых чисел, возвращает, сколько из них содержат четное количество цифр.nums****
+ 
+**Пример 1:**
+
+Input: nums = [12,345,2,6,7896]
+**Output:** 2
+**Решение:**
+```cpp
+#include <iostream>
+#include <vector>
+
+class Solution {
+public:
+    int findNumbers(std::vector<int>& nums) {
+        int result = 0;
+
+        for (int i = 0; i < nums.size(); i++) {
+            int num = nums[i];
+            int digitCount = 0;
+
+            while (num > 0) {
+                num = num / 10;
+                digitCount++;
+            }
+
+            if (digitCount % 2 == 0) {
+                  result++;
+            }
+        }
+
+        return result;
+    }
+};
+
+int main() {
+    Solution solution;
+    std::vector<int> nums = {123, 345, 233, 6, 73896};
+    std::cout << solution.findNumbers(nums);
+}
