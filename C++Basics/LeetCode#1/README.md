@@ -86,3 +86,38 @@ int main() {
     std::vector<int> nums = {123, 345, 233, 6, 73896};
     std::cout << solution.findNumbers(nums);
 }
+```
+
+
+**3. Дан целочисленный массив, отсортированный в неубывающем порядке, возвращает массив квадратов каждого числа, отсортированных в неубывающем порядке.nums**
+
+```**Пример 1:**
+Input: nums = [-4,-1,0,3,10]    Output: [0,1,9,16,100]
+```
+```**Пример 2:**
+Input: nums = [-7,-3,2,3,11]    Output: [4,9,9,49,121]
+```
+```cpp
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+class Solution {
+public:
+    std::vector<int> sortedSquares(std::vector<int>& nums) {
+        for(int i = 0; i < nums.size(); i++){
+            nums[i] = nums[i] * nums[i];
+        }
+        std::sort(nums.begin(), nums.end());
+        return nums;
+    }
+};
+
+int main(){
+    Solution solution;
+    std::vector<int> nums = {-4, -1, 0, 3, 10};
+    std::vector<int> result = solution.sortedSquares(nums);
+    for (int num : result) {
+        std::cout << num << " ";
+    }
+}
