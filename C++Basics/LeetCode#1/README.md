@@ -52,6 +52,7 @@ int main() {
 
 Input: nums = [12,345,2,6,7896]
 **Output:** 2
+
 **Решение:**
 ```cpp
 #include <iostream>
