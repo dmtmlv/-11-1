@@ -8,7 +8,7 @@ Input: nums = [1,0,1,1,0,1]   Output: 2
 
 **Решение:**
 
-#include <iostream>
+>#include <iostream>
 #include <vector>
 class Solution {
 public:
