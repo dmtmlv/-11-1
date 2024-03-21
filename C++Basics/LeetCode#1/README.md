@@ -6,16 +6,15 @@ Input: nums = [1,1,0,1,1,1]   Output: 3
 **Пример 2:**
 Input: nums = [1,0,1,1,0,1]   Output: 2
 
----**Решение:**---
+**Решение:**
+
 #include <iostream>
 #include <vector>
-
 class Solution {
 public:
     int findMaxConsecutiveOnes(std::vector<int>& nums) {
         int maxOnes = 0;
         int result = 0;
-
         for (int i = 0; i < nums.size(); i++) {
             if (nums[i] == 1) {
                   result++;
@@ -24,13 +23,10 @@ public:
                   result = 0;
             }
         }
-
         maxOnes = std::max(maxOnes, result);
-
         return maxOnes;
     }
 };
-
 int main() {
     Solution solution;
     std::vector<int> nums = {1, 1, 0, 1, 1, 1};
