@@ -72,6 +72,7 @@ Explanation:
 heights:  [5,1,2,3,4]
 expected: [1,2,3,4,5]
 ```
+**Решение**
 ```cpp
 #include <iostream>
 #include <vector>
