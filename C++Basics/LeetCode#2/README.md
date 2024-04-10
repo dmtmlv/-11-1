@@ -102,3 +102,51 @@ int main(){
   std::cout << s.heightChecker(heights);
 }
 ```
+
+
+****3. Учитывая односвязный список, отсортируйте список с помощью сортировки вставкой и верните заголовок отсортированного списка****
+
+```**Пример 1:**
+Input: head = [4,2,1,3]
+Output: [1,2,3,4]
+```
+```**Пример 2:**
+Input: head = [-1,5,3,4,0]
+Output: [-1,0,3,4,5]
+```
+
+```cpp Решение
+#include <iostream>
+
+void insertionSort(int arr[], int n) {
+    for (int i = 1; i < n; i++) {
+        int key = arr[i];
+        int j = i - 1;
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j = j - 1;
+        }
+        arr[j + 1] = key;
+    }
+}
+
+int main() {
+    setlocale(LC_ALL, "ru");
+    int arr[] = { 64, 34, 25, 12, 22, 11, 90 };
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    std::cout << "Исходный массив: ";
+    for (int i = 0; i < n; i++) {
+        std::cout << arr[i] << " ";
+    }
+
+    insertionSort(arr, n);
+
+    std::cout << "\nОтсортированный массив: ";
+    for (int i = 0; i < n; i++) {
+        std::cout << arr[i] << " ";
+    }
+
+    return 0;
+}
+```
