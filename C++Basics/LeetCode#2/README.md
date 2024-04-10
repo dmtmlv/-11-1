@@ -49,3 +49,53 @@ int main() {
     return 0;
 }
 ```
+
+
+****2. Школа пытается ежегодно фотографировать всех учеников. Студентам предлагается встать в одну линию в порядке убывания по росту. Пусть этот порядок представлен целочисленным массивом, где — ожидаемый рост ученика в строке expectedexpected[i]
+Вам дан целочисленный массив, представляющий текущий порядок, в котором находятся студенты. Каждый из них соответствует росту ученика в строке (с индексом 0) heightsheights[i]
+Программа должна возвращать количество индексов, где heights[i] != expected[i]****
+
+ 
+
+```**Пример 1:**
+Input: heights = [1,1,4,2,1,3]
+Output: 3
+Explanation:
+heights:  [1,1,4,2,1,3]
+expected: [1,1,1,2,3,4]
+```
+
+```**Пример 2:**
+Input: heights = [5,1,2,3,4]
+Output: 5
+Explanation:
+heights:  [5,1,2,3,4]
+expected: [1,2,3,4,5]
+```
+```cpp
+#include <iostream>
+#include <vector>
+#include<algorithm>
+
+class Solution {
+public:
+    int heightChecker(std::vector<int>& heights) {
+        std::vector<int> expected = heights;
+        std::sort(expected.begin(), expected.end());
+
+        int count = 0;
+        for (int i = 0; i < heights.size(); ++i) {
+            if (heights[i] != expected[i]) {
+                count++;
+            }
+        }
+
+        return count;
+    }
+};
+int main(){
+  std::vector<int> heights = {1,1,4,2,1,3};
+  Solution s;
+  std::cout << s.heightChecker(heights);
+}
+```
