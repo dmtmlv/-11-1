@@ -10,7 +10,7 @@ Output: [0,0,1,1,2,2]
 Input: nums = [2,0,1]
 Output: [0,1,2]
 ```
-**Решение**
+**Решение:**
 
 ```cpp
 #include <iostream>
@@ -74,7 +74,7 @@ Explanation:
 heights:  [5,1,2,3,4]
 expected: [1,2,3,4,5]
 ```
-**Решение**
+**Решение:**
 ```cpp
 #include <iostream>
 #include <vector>
@@ -115,7 +115,8 @@ Input: head = [-1,5,3,4,0]
 Output: [-1,0,3,4,5]
 ```
 
-```cpp Решение
+**Решение:**
+```cpp
 #include <iostream>
 
 void insertionSort(int arr[], int n) {
