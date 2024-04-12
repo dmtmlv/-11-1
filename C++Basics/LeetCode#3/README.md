@@ -50,3 +50,44 @@ int main() {
   std::cout<<"\n"<< max;
 }
 ```
+
+****2. Дан целочисленный массив фиксированной длины, дублируйте каждое вхождение нуля, сдвигая оставшиеся элементы вправо.
+Обратите внимание, что элементы, превышающие длину исходного массива, не записываются. Внесите описанные выше изменения во входной массив на месте и ничего не возвращайте.
+
+****
+```Пример 1
+Input: arr = [1,0,2,3,0,4,5,0]
+Output: [1,0,0,2,3,0,0,4]
+```
+```Пример 2
+Input: arr = [1,2,3]
+Output: [1,2,3]
+```
+```cpp
+#include <iostream>
+
+class Solution {
+public:
+    static void duplicateZeros(int arr[], int n) {
+        for (int i = 0; i < n; i++) {
+            if (arr[i] == 0) {
+                for (int j = n - 1; j > i; j--) {
+                    arr[j] = arr[j - 1];
+                }
+                i++; // skip the duplicated zero
+            }
+        }
+    }
+};
+
+int main() {
+    Solution s;
+    int arr[] = {1,0,2,3,0,4,5,0};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    Solution::duplicateZeros(arr, n);
+
+    for (int i = 0; i < n; i++) {
+        std::cout << arr[i] << " ";
+    }
+}
+```
