@@ -73,7 +73,7 @@ public:
                 for (int j = n - 1; j > i; j--) {
                     arr[j] = arr[j - 1];
                 }
-                i++; // skip the duplicated zero
+                i++;
             }
         }
     }
