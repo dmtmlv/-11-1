@@ -90,3 +90,46 @@ int main() {
     }
 }
 ```
+
+
+****3. Дан массив целых чисел, проверьте, существуют ли два индекса и такие, что: arr i j
+i != j
+0 <= i, j < arr.length
+arr[i] == 2 * arr[j]****
+
+```Пример 1:
+Input: arr = [10,2,5,3]
+Output: true
+```
+```Пример 2:
+Input: arr = [3,1,7,11]
+Output: false
+```
+
+
+```cpp
+#include <iostream>
+#include <vector>
+
+class Solution {
+public:
+    bool checkIfExist(std::vector<int>& arr) {
+        for (int i = 0; i < arr.size(); i++) {
+            for (int j = 0; j < arr.size(); j++) {
+                if (i != j && arr[i] == 2 * arr[j]) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+};
+
+int main() {
+    Solution s;
+  
+    std::vector<int> arr = {10, 2, 5, 3};
+    std::cout << s.checkIfExist(arr) << std::endl;
+    return 0;
+}
+```
