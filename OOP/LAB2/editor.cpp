@@ -2,14 +2,14 @@
 #include <stack>
 #include <string>
 
-// Command Interface
+// интерфейс
 class Command {
 public:
     virtual void execute() = 0;
     virtual void undo() = 0;
 };
 
-// Concrete Command for typing a character
+// команда для ввода символа
 class TypeCommand : public Command {
 private:
     std::string& buffer;
@@ -30,7 +30,7 @@ public:
     }
 };
 
-// Concrete Command for shifting cursor left
+// команда для перемещения курсора влево
 class ShiftLeftCommand : public Command {
 private:
     int& cursorPos;
@@ -47,7 +47,7 @@ public:
     }
 };
 
-// Concrete Command for shifting cursor right
+// команда для перемещения курсора вправо
 class ShiftRightCommand : public Command {
 private:
     int& cursorPos;
@@ -65,7 +65,7 @@ public:
     }
 };
 
-// TextEditor Class
+// класс TextEditor
 class TextEditor {
 private:
     std::string buffer;
