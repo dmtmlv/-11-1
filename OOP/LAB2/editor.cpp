@@ -142,5 +142,5 @@ int main() {
     return 0;
 }
 
-`cpp
-int main()`
+```cpp
+int main()```
