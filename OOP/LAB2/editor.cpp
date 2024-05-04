@@ -141,6 +141,6 @@ int main() {
 
     return 0;
 }
-``cpp
-Hello
-``
+
+`cpp
+int main()`
