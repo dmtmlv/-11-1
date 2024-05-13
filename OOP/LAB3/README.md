@@ -1,4 +1,4 @@
-****Аналог класса ANY****
+##****Аналог класса ANY***##
 
 - template<typename T> any(const T& t) : held_(new holder<T>(t)), initialized_(true) {}: Конструктор класса any, который принимает любое значение t и инициализирует объект класса any с этим значением. Он устанавливает флаг initialized_ в true.
 
