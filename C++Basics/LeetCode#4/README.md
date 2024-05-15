@@ -86,3 +86,44 @@ int main() {
     return 0;
 }
 ```
+****3. Дан целочисленный массив nums, переместить все нули в его конец, сохраняя относительный порядок ненулевых элементов.
+Обратите внимание, что вы должны сделать это на месте, не создавая копию массива..****
+
+```Пример 1:
+Input: nums = [0,1,0,3,12]
+Output: [1,3,12,0,0]
+```
+```Пример 2:
+Input: nums = [0]
+Output: [0]
+```
+```cpp
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+void moveZeroes(std::vector<int>& nums) {
+    int nonZeroIdx = 0;
+
+    // Move all non-zero elements to the front
+    for (int i = 0; i < nums.size(); i++) {
+        if (nums[i] != 0) {
+            std::swap(nums[i], nums[nonZeroIdx]);
+            nonZeroIdx++;
+        }
+    }
+}
+
+int main() {
+    std::vector<int> nums = {0, 1, 0, 3, 12};
+
+    moveZeroes(nums);
+
+    for (int num : nums) {
+        std::cout << num << " ";
+    }
+    std::cout << std::endl;
+
+    return 0;
+}
+```
