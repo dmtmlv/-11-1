@@ -105,7 +105,6 @@ Output: [0]
 void moveZeroes(std::vector<int>& nums) {
     int nonZeroIdx = 0;
 
-    // Move all non-zero elements to the front
     for (int i = 0; i < nums.size(); i++) {
         if (nums[i] != 0) {
             std::swap(nums[i], nums[nonZeroIdx]);
