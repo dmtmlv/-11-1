@@ -2,8 +2,8 @@
 ****Напомним, что arr является горным массивом тогда и только тогда, когда:****
 - arr.length >= 3
 - Существуют такие, которые: i0 < i < arr.length - 1
-- - arr[0] < arr[1] < ... < arr[i - 1] < arr[i]
-- - arr[i] > arr[i + 1] > ... > arr[arr.length - 1]
+ - arr[0] < arr[1] < ... < arr[i - 1] < arr[i]
+ - arr[i] > arr[i + 1] > ... > arr[arr.length - 1]
 
 ```Пример 1:
 Input: arr = [2,1]
