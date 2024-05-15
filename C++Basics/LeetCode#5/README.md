@@ -14,6 +14,7 @@ Output: false
 Input: arr = [0,3,2,1]
 Output: true
 ```
+**Решение:**
 ```cpp
 #include<iostream>
 #include<vector>
@@ -104,5 +105,57 @@ int main() {
       std::cout << arr[n-k] << " ";
       break;
     }
+}
+```
+
+****3. Дан массив , замените каждый элемент в этом массиве наибольшим элементом среди элементов справа от него, а последний элемент замените на .arr-1
+После этого верните массив.****
+
+```Пример 1:
+Input: arr = [17,18,5,4,6,1]
+Output: [18,6,6,6,1,-1]
+```
+```Пример 2:
+Input: arr = [400]
+Output: [-1]
+```
+
+**Решение:**
+```cpp
+#include<iostream>
+#include<vector>
+
+class Solution {
+public:
+    std::vector<int> replaceElements(std::vector<int>& arr) {
+        int n = arr.size();
+        if (n == 0) {
+            return {};
+        }
+
+        int max_right = arr[n-1];
+        arr[n-1] = -1;
+
+        for (int i = n - 2; i >= 0; i--) {
+            int temp = arr[i];
+            arr[i] = max_right;
+            max_right = std::max(max_right, temp);
+        }
+
+        return arr;
+    }
+};
+
+int main() {
+    Solution s;
+    std::vector<int> arr = {17,18,5,4,6,1};
+    std::vector<int> result = s.replaceElements(arr);
+
+    for (int num : result) {
+        std::cout << num << " ";
+    }
+    std::cout << std::endl;
+
+    return 0;
 }
 ```
