@@ -36,3 +36,53 @@ int main() {
     return 0;
 }
 ```
+
+****2. Дан целочисленный массив nums, переместить все четные целые числа в начало массива, за которыми следуют все нечетные целые числа.
+Возвращает любой массив, удовлетворяющий этому условию.****
+
+```Пример 1:
+Input: nums = [3,1,2,4]
+Output: [2,4,3,1]
+```
+```Пример 2:
+Input: nums = [0]
+Output: [0]
+```
+
+```cpp
+#include <iostream>
+#include <vector>
+
+std::vector<int> moveEvenNumbers(std::vector<int>& nums) {
+    int n = nums.size();
+    int left = 0, right = n - 1;
+
+    while (left < right) {
+        if (nums[left] % 2 != 0) {
+            if (nums[right] % 2 == 0) {
+                std::swap(nums[left], nums[right]);
+                left++;
+                right--;
+            } else {
+                right--;
+            }
+        } else {
+            left++;
+        }
+    }
+
+    return nums;
+}
+
+int main() {
+    std::vector<int> nums = {1,3,6,8,3,0,2,3,12,7,4};
+    std::vector<int> result = moveEvenNumbers(nums);
+
+    for (int num : result) {
+        std::cout << num << " ";
+    }
+    std::cout << std::endl;
+
+    return 0;
+}
+```
