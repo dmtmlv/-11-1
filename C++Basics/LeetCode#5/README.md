@@ -15,6 +15,9 @@ Input: arr = [0,3,2,1]
 Output: true
 ```
 ```cpp
+#include<iostream>
+#include<vector>
+
 class Solution {
 public:
     bool validMountainArray(std::vector<int>& arr) {
@@ -25,15 +28,17 @@ public:
     }
 
     int i = 0;
-        
+
     while (i+1 < n && arr[i] < arr[i+1]) {
         i++;
     }
 
+    // Пик горы не может быть на краю массива
     if (i == 0 || i == n-1) {
         return false;
     }
 
+    // Спускаемся по убыванию
     while (i+1 < n && arr[i] > arr[i+1]) {
         i++;
     }
@@ -41,6 +46,18 @@ public:
     return i == n-1;
     }
 };
+int main() {
+    Solution s;
+    std::vector<int> arr = {0, 1, 2, 3, 4, 5, 6, 7};
+    bool result = s.validMountainArray(arr);
+
+    if (result) {
+        std::cout << "true" << std::endl;
+    } else {
+        std::cout << "false" << std::endl;
+    }
+    return 0;
+}
 ```
 
 
