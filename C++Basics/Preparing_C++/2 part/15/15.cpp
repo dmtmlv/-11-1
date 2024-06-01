@@ -33,7 +33,7 @@ void removeFlight(int flightID) {
 int main() {
     addFlight(1, "New York - London", "10:00");
     addFlight(2, "Paris - Tokyo", "14:30");
-    addFlight(1, "Moscow - Berlin", "09:00"); // пытаемя создать повторяющийся рейс, но ничего не выйдет :D
+    addFlight(1, "Moscow - Berlin", "09:00"); // пытаемя создать рейс, с существующим айдишником, но ничего не выйдет :D
      removeFlight(2);
     return 0;
 }
