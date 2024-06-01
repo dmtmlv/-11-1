@@ -33,7 +33,7 @@ int main() {
     addProduct(2, "Smartphone", 15);
     
     removeProduct(1);
-    removeProduct(3); // Trying to remove a nonexistent product
+    removeProduct(3); // пытаемся удалить несуществующий продукт
     
     return 0;
 }
