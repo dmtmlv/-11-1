@@ -93,8 +93,8 @@ class Program
 
     static async Task Main(string[] args)
     {
-        httpClient.DefaultRequestHeaders.Add("API key", "5824cefcd7a9ba30b543c84068ae017c7a149657");
-        httpClient.DefaultRequestHeaders.Add("secret key", "2744d3227c1b977bb18dc4d26bd7e953ae7c8c12");
+        httpClient.DefaultRequestHeaders.Add("API key", "5824cefcd7a9ba30b543c84068ae017c7a149657"); // API с лк https://dadata.ru
+        httpClient.DefaultRequestHeaders.Add("secret key", "2744d3227c1b977bb18dc4d26bd7e953ae7c8c12"); // секретный ключ с лк https://dadata.ru
 
         People_List peopleList = new People_List();
         try
