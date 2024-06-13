@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/selectedDateTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/dayTypeEditText"
+            android:layout_below="@id/selectedDateTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter day type (e.g. Working day, Holiday)"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/saveDayTypeButton"
+            android:layout_below="@id/dayTypeEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save Day Type" />
+
+        <LinearLayout
+            android:id="@+id/hoursContainer"
+            android:layout_below="@id/saveDayTypeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </RelativeLayout>
+</ScrollView>
